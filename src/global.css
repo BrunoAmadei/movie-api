@@ -14,8 +14,19 @@ ul {
   list-style: none;
 }
 
+span{
+  font-weight: bold;
+  font-size: 130%;
+  color: #b11623;
+}
+
 a {
   text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover{
+  transform: scale(1.1);
 }
 
 img {
@@ -24,3 +35,4 @@ img {
   border: 1px solid #000000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+

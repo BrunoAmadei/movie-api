@@ -1,5 +1,5 @@
 import ApiKey from '../../config'
-import { Container, Cards, Card, MovieTitle } from '../styles'
+import { Container, Cards, Card } from '../styles'
 
 const Home = () => {
     const key = { ApiKey }
@@ -10,20 +10,28 @@ const Home = () => {
                 <h1>Top Rated</h1>
                 <Cards>
                     <Card>
-                        <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        <MovieTitle>Batman</MovieTitle>
+                        <a href="#">
+                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
+                        </a>
+                        <span>Batman</span>
                     </Card>
                     <Card>
-                        <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        <MovieTitle>Batman</MovieTitle>
+                        <a href="#">
+                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
+                        </a>
+                        <span>Batman</span>
                     </Card>
                     <Card>
-                        <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        <MovieTitle>Batman</MovieTitle>
+                        <a href="#">
+                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
+                        </a>
+                        <span>Batman</span>
                     </Card>
                     <Card>
-                        <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        <MovieTitle>Batman</MovieTitle>
+                        <a href="#">
+                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
+                        </a>
+                        <span>Batman</span>
                     </Card>
                 </Cards>
             </section>

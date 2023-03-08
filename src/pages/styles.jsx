@@ -21,8 +21,3 @@ export const Card = styled.li`
     gap: 15px;    
 `
 
-export const MovieTitle = styled.span`
-    font-weight: bold;
-    font-size: 130%;
-    color: #b11623;
-`
