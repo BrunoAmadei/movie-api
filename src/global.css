@@ -1,15 +1,26 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Golos Text', Helvetica, sans-serif;
+  font-family: 'Golos Text', Helvetica, sans-serif;
 }
 
-body{
+body {
   background-color: #292c37;
   color: #cccccc;
 }
 
-ul{
+ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 230px;
+  border-radius: 1rem;
+  border: 1px solid #000000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
