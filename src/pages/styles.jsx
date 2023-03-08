@@ -18,6 +18,7 @@ export const Card = styled.li`
     align-items: center;
     flex-direction: column;
     margin-bottom: 1.25rem;
-    gap: 15px;    
+    margin-left: 1.4rem;
+    gap: 20px;    
 `
 

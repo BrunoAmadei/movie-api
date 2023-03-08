@@ -1,42 +1,33 @@
-import ApiKey from '../../config'
+import { useState, useEffect } from 'react'
 import { Container, Cards, Card } from '../styles'
+import { imageUrl, TopRatedUrl } from '../../config'
 
 const Home = () => {
-    const key = { ApiKey }
-    // console.log(key)
+    
+    const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        fetch(TopRatedUrl)
+            .then(response => response.json())
+            .then(data => setMovies(data.results))
+    }, [])
+
     return (
         <Container>
             <section>
                 <h1>Top Rated</h1>
                 <Cards>
-                    <Card>
-                        <a href="#">
-                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        </a>
-                        <span>Batman</span>
-                    </Card>
-                    <Card>
-                        <a href="#">
-                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        </a>
-                        <span>Batman</span>
-                    </Card>
-                    <Card>
-                        <a href="#">
-                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        </a>
-                        <span>Batman</span>
-                    </Card>
-                    <Card>
-                        <a href="#">
-                            <img src="https://img.elo7.com.br/product/original/264FCC6/big-poster-filme-batman-o-cavaleiro-das-trevas-lo02-90x60-cm-batman.jpg" alt="Batman Cavaleiro das trevas" />
-                        </a>
-                        <span>Batman</span>
-                    </Card>
+                    {movies.map(movie => {
+                        return (
+                            <Card key={movie.id}>
+                                <a href="#">
+                                    <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
+                                </a>
+                                <span>{movie.title}</span>
+                            </Card>
+                        )
+                    })}
                 </Cards>
-            </section>
-            <section>
-                <h1>Popular</h1>
             </section>
         </Container>
     )
