@@ -15,6 +15,7 @@ export const Cards = styled.ul`
 
 export const Card = styled.li`
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 1.25rem;
     gap: 15px;    
@@ -22,5 +23,6 @@ export const Card = styled.li`
 
 export const MovieTitle = styled.span`
     font-weight: bold;
-    font-size: 1.35rem;
+    font-size: 130%;
+    color: #b11623;
 `
