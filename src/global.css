@@ -15,6 +15,7 @@ ul {
 }
 
 span{
+  text-align: center;
   font-weight: bold;
   font-size: 130%;
   color: #b11623;
@@ -32,7 +33,7 @@ a:hover{
 img {
   width: 230px;
   border-radius: 1rem;
-  border: 1px solid #000000;
+  border: 3px solid #9f111b;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
