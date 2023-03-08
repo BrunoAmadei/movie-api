@@ -1,11 +1,11 @@
-import Home from './pages/Home'
+import Home from "./pages/Home/Home"
 
 function App() {
   return (
     <div>
-      <h1>Hello, friend</h1>
+      <h1>Titulo legal</h1>
       <Home />
-    </div>
+    </div >
   )
 }
 
