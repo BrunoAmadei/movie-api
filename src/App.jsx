@@ -1,13 +1,10 @@
-import ApiKey from './config.js'
-
+import Home from './pages/Home'
 
 function App() {
-
-  const key = { ApiKey }
-  console.log(key)
   return (
     <div>
       <h1>Hello, friend</h1>
+      <Home />
     </div>
   )
 }
