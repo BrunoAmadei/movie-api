@@ -11,6 +11,7 @@ export const Cards = styled.ul`
     justify-content: space-around;
     padding: 1.5rem;
     row-gap: 4rem;
+    flex-wrap: wrap;
 `
 
 export const Card = styled.li`
