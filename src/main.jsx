@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='search' element={<Search />} />
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
 )

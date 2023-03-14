@@ -17,7 +17,7 @@ export const Cards = styled.ul`
 export const Card = styled.li`
     display: flex;
     align-items: center;
-    text-aligbn: center;
+    text-align: center;
     flex-direction: column;
     margin-bottom: 1.25rem;
     margin-left: 1.4rem;

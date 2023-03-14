@@ -1,14 +1,12 @@
-import Home from "./pages/Home/Home"
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
-    <div>
-      <Link to={'/'}>
-        <h1>Titulo legal</h1>
-      </Link>
-
+    <>
+      <Navbar />
       <Outlet />
-    </div >
+    </>
   )
 }
 
