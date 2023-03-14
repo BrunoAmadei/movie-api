@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Container, Cards, Card } from '../styles'
 import { imageUrl, TopRatedUrl } from '../../config'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -19,9 +19,9 @@ const Home = () => {
                 <Cards>
                     {movies.map(movie => (
                         <Card key={movie.id}>
-                            <a href="#">
+                            <Link to={`/movie/${movie.id}`}>
                                 <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
-                            </a>
+                            </Link>
                             <span>{movie.title}</span>
                         </Card>
                     ))}
