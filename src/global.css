@@ -14,7 +14,7 @@ ul {
   list-style: none;
 }
 
-span{
+span {
   text-align: center;
   font-weight: bold;
   font-size: 130%;
@@ -26,7 +26,7 @@ a {
   transition: all 0.3s;
 }
 
-a:hover{
+a:hover {
   transform: scale(1.1);
 }
 
@@ -35,4 +35,14 @@ img {
   border-radius: 1rem;
   border: 3px solid #9f111b;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.link {
+  font-size: 2.5rem;
+  color: #b11623;
+  transition: ease-in 0.3s;
+}
+
+.link:hover {
+  opacity: 0.8;
 }
