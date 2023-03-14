@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <Nav>
             <Link to={'/'}>
-                <h1 className='link'>Titulo legal</h1>
+                <h1>Titulo legal</h1>
             </Link>
             <form>
                 <input type="text" placeholder='search movie' />
