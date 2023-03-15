@@ -47,5 +47,5 @@ export const Input = styled.input`
     outline:none;
     float:left;
     color: #cccccc;
-    font-size: 1rem;
+    font-size: 1.2rem;
 `
