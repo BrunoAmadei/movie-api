@@ -7,22 +7,45 @@ export const Nav = styled.nav`
     align-items: center;
     padding: 2rem;
     justify-content: space-between;
+
 `
 
 export const Form = styled.form`
-    display: flex;
-    width: 300px;
-    justify-content: space-around;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    margin-bottom: 28px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    &:hover>Button{
+        color: #b11623;
+    }
 `
 
 export const Btn = styled.button`
-    background: transparent;
-    /* outline: none;
-    border: none; */
-    font-size: 2rem;
-    transition: ease-in 0.3s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #cccccc;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+    top: -10px;
+    transition: all 0.4s;
     &:hover{
         cursor: pointer;
-        color: red;
     }
+`
+
+export const Input = styled.input`
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    color: #cccccc;
+    font-size: 1rem;
 `

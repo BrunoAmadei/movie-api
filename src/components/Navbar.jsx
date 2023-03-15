@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { AiOutlineSearch } from "react-icons/ai";
 
-import { Nav, Btn, Form } from './styles';
+import { Nav, Btn, Form, Input } from './styles';
 
 function Navbar() {
     return (
@@ -10,8 +10,10 @@ function Navbar() {
                 <h1 className='link'>Titulo legal</h1>
             </Link>
             <Form>
-                <input type="text" placeholder='search movie' />
-                <Btn type='submit'><AiOutlineSearch /></Btn>
+                <Input type="text" placeholder='search movie' />
+                <Btn type='submit'>
+                    <AiOutlineSearch />
+                </Btn>
             </Form>
         </Nav>
     )
