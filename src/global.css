@@ -10,24 +10,13 @@ body {
   color: #cccccc;
 }
 
-ul {
-  list-style: none;
-}
-
-span {
-  text-align: center;
-  font-weight: bold;
-  font-size: 130%;
-  color: #b11623;
-}
-
 a {
   text-decoration: none;
   transition: all 0.3s;
 }
 
-a:hover {
-  transform: scale(1.1);
+h2{
+  margin-bottom: 1rem;
 }
 
 img {
@@ -40,7 +29,7 @@ img {
 .link {
   font-size: 2.5rem;
   color: #b11623;
-  transition: ease-in 0.3s;
+  transition: all ease-in 0.2s;
 }
 
 .link:hover {
