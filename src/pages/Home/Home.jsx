@@ -1,34 +1,26 @@
 import { useState, useEffect } from 'react'
-import { Container, Cards, Card } from '../styles'
-import { imageUrl, TopRatedUrl } from '../../config'
+import config from '../../config'
+import Movies from '../../components/Movies/Movies'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const [movies, setMovies] = useState([])
+    const [movieList, setMovieList] = useState([])
 
     useEffect(() => {
-        fetch(TopRatedUrl)
-            .then(response => response.json())
-            .then(data => setMovies(data.results))
+        const loadAll = async () => {
+            let movies = await config.getHomeList()
+            setMovieList(movies)
+        }
+        loadAll()
     }, [])
 
     return (
-        <Container>
-            <section>
-                <h1>Top Rated</h1>
-                <Cards>
-                    {movies.map(movie => (
-                        <Card key={movie.id}>
-                            <Link to={`/movie/${movie.id}`}>
-                                <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
-                            </Link>
-                            <span>{movie.title}</span>
-                        </Card>
-                    ))}
-                </Cards>
-
-            </section>
-        </Container>
+        <div>
+            {movieList.map((item, key) => (
+                <Movies key={key} />
+            ))
+            }
+        </div >
     )
 }
 
