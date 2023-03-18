@@ -1,16 +1,16 @@
 import React from "react";
-import { MovieRow, Cards, Card } from "./styles";
+import { MovieRow, Cards, Card, Item, Title } from "./styles";
 
 export default ({ title, items }) => {
     return (
         <MovieRow>
-            <h2>{title}</h2>
+            <Title>{title}</Title>
             <Cards>
                 <Card>
                     {items.results.length > 0 && items.results.map((item, key) => (
-                        <div key={key}>
+                        <Item key={key}>
                             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt={item.original_title} />
-                        </div>
+                        </Item>
                     ))}
                 </Card>
             </Cards>
