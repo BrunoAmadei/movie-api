@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div>
             {movieList.map((item, key) => (
-                <Movies key={key} />
+                <Movies key={key} title={item.title} items={item.items}/>
             ))
             }
         </div >

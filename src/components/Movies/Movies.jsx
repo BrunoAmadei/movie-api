@@ -1,9 +1,14 @@
 import React from "react";
 
-export default () => {
-    return(
+export default ({ title, items }) => {
+    return (
         <div>
-            <p>Isso</p>
+            <h2>{title}</h2>
+            <div>
+                {items.results.length > 0 && items.results.map((item, key) => (
+                    <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt="" key={key} />
+                ))}
+            </div>
         </div>
     )
 }
