@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { } from './styles'
+import { Featured } from './styles'
 
-export default () => {
-    return(
-        <div>
-            fodase
-        </div>
+export default ({ item }) => {
+    return (
+        <Featured style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}>
+            <div>
+                {item.original_title}
+            </div>
+        </Featured>
     )
 }

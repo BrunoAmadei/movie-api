@@ -15,10 +15,9 @@ const Home = () => {
             // featured movie 
             let popular = movies.filter(i => i.slug === 'popular')
             let randomMovie = Math.floor(Math.random() * (popular[0].items.results.length - 1))
-            let banner = popular[0].items.results[randomMovie]
-            let bannerInfo =  await config.getMovieInfo(banner.id)
-          
-            console.log( {bannerInfo} )
+            let chosenMovie = popular[0].items.results[randomMovie]
+            let bannerInfo = await config.getMovieInfo(chosenMovie.id)
+            setBannerData(bannerInfo)
         }
 
         loadAll()
