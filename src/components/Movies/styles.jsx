@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const MovieRow = styled.div`
-    border: 1px solid yellow;
-    margin: 1.8rem 0 1.135rem 1.8rem;
+    margin: 0 0 1.135rem 1.8rem;
 `
 export const Title = styled.h2`
     margin: 1.8rem;
