@@ -18,13 +18,13 @@ export default ({ item }) => {
                             {item.vote_average}
                         </div>
                         <div>
-                           2022
+                            {item.release_date}
                         </div>
-                        <div>
-                            {item.overview}
-                        </div>
-
+                        <div>{item.runtime} min</div>
                     </Info>
+                    <div>
+                        {item.overview}
+                    </div>
                 </BannerHorizontal>
             </BannerVertical>
         </Featured>
