@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import config from '../../config'
 import Movies from '../../components/Movies/Movies'
-import { Link } from 'react-router-dom'
 import Banner from '../../components/Banner/Banner'
 
 const Home = () => {
@@ -15,10 +14,11 @@ const Home = () => {
 
             // featured movie 
             let popular = movies.filter(i => i.slug === 'popular')
-            let randomImg = Math.floor(Math.random() * (popular[0].items.results.length - 1))
-            let banner = popular[0].items.results[randomImg]
-            
-            console.log(banner)
+            let randomMovie = Math.floor(Math.random() * (popular[0].items.results.length - 1))
+            let banner = popular[0].items.results[randomMovie]
+            let bannerInfo =  await config.getMovieInfo(banner.id)
+          
+            console.log( {bannerInfo} )
         }
 
         loadAll()
