@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Featured = styled.section`
-    height: 100vh;
+    height: 92vh;
     background-size: cover;
     background-position: center;
 `

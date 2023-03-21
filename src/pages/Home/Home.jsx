@@ -24,7 +24,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className='lists'>
             {bannerData &&
                 <Banner item={bannerData} />
             }

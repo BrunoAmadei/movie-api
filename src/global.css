@@ -14,13 +14,3 @@ a {
   text-decoration: none;
   transition: all 0.3s;
 }
-
-.link {
-  font-size: 2.5rem;
-  color: #b11623;
-  transition: all ease-in 0.2s;
-}
-
-.link:hover {
-  opacity: 0.8;
-}

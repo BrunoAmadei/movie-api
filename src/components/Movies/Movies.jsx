@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MovieRow, Cards, Card, Item, Title } from "./styles";
+import { MovieRow, Cards, Card, Item } from "./styles";
 
 export default ({ title, items }) => {
     return (
         <MovieRow>
-            <Title>{title}</Title>
+            <h2>{title}</h2>
             <Cards>
                 <Card>
                     {items.results.length > 0 && items.results.map((item, key) => (
