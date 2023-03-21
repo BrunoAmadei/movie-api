@@ -16,6 +16,10 @@ export const BannerHorizontal = styled.div`
     width: inherit;
     height: inherit;
     background: linear-gradient(to right, #292c37 25%, transparent 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
 `
 
 export const Title = styled.div`
@@ -86,3 +90,7 @@ export const BtnArea = styled.div`
     }
 `
 
+export const Genres = styled.div`
+    margin-top: 0.7rem;
+    font-size: 1.3rem;
+`
