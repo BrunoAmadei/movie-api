@@ -9,9 +9,11 @@ export default ({ title, items }) => {
             <Cards>
                 <Card>
                     {items.results.length > 0 && items.results.map((item, key) => (
-                        <Item key={key}>
-                            <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt={item.original_title} />
-                        </Item>
+                        <Link to={`/Movie/${item.id}`}>
+                            <Item key={key}>
+                                <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} alt={item.original_title} />
+                            </Item>
+                        </Link>
                     ))}
                 </Card>
             </Cards>

@@ -2,12 +2,11 @@ import React from 'react'
 import { AiFillStar, AiOutlineInfoCircle } from "react-icons/ai";
 import { Featured, BannerVertical, BannerHorizontal, Title, Info } from './styles'
 import {Link} from 'react-router-dom'
+
 export default ({ item }) => {
     let genres = []
-
     for (let g in item.genres) {
         genres.push(item.genres[g].name)
-        console.log(item.genres[g].name)
     }
 
     return (
@@ -30,7 +29,7 @@ export default ({ item }) => {
                         {item.overview}
                     </div>
                     <div>
-                        <Link>
+                        <Link to={`/Movie/${item.id}`}> 
                             <button><AiOutlineInfoCircle/> Info</button>
                         </Link>
                     </div>
