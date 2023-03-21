@@ -57,3 +57,32 @@ export const Description = styled.div`
     color: #fff;
     max-width: 40%;
 `
+
+export const BtnArea = styled.div`
+    margin-top: 0.6rem;
+    max-width: 28%;
+    display: flex;
+    justify-content: center;
+    a{
+        width: 100%;
+        text-decoration: none;
+    }
+    button{
+        padding: 0.8rem;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        border-radius: 1rem;
+        background-color: transparent;
+        color: white;
+        transition: ease-in 0.2s;
+    }span{
+        color: #9f111b;
+    }
+    button:hover{
+        cursor: pointer;
+        color: #9f111b;
+        opacity: 0.7;
+    }
+`
+

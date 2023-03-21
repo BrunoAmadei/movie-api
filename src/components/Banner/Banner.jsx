@@ -1,7 +1,8 @@
 import React from 'react'
 import { AiFillStar, AiOutlineInfoCircle, AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
-import { Featured, BannerVertical, BannerHorizontal, Title, Info, Vote, ReleaseDate, Runtime, Description } from './styles'
-import {Link} from 'react-router-dom'
+import { BsInfoCircle } from "react-icons/bs";
+import { Featured, BannerVertical, BannerHorizontal, Title, Info, Vote, ReleaseDate, Runtime, Description, BtnArea } from './styles'
+
 
 export default ({ item }) => {
     let genres = []
@@ -21,25 +22,27 @@ export default ({ item }) => {
                             <span><AiFillStar /></span> {item.vote_average}
                         </Vote>
                         <ReleaseDate>
-                            <span><AiFillCalendar/></span> {item.release_date}
+                            <span><AiFillCalendar /></span> {item.release_date}
                         </ReleaseDate>
                         <Runtime>
-                            <span><AiFillClockCircle/></span> {item.runtime} min
+                            <span><AiFillClockCircle /></span> {item.runtime} min
                         </Runtime>
                     </Info>
                     <Description>
                         {item.overview}
                     </Description>
-                    <div>
-                        <Link to={`/Movie/${item.id}`}> 
-                            <button><AiOutlineInfoCircle/> Info</button>
-                        </Link>
-                    </div>
+                    <BtnArea>
+                        <a href={`/Movie/${item.id}`}>
+                            <button>
+                               <span><BsInfoCircle /></span> Info
+                            </button>
+                        </a>
+                    </BtnArea>
                     <div>
                         <strong>Genres:</strong> {genres.join(', ')}
                     </div>
                 </BannerHorizontal>
             </BannerVertical>
-        </Featured>
+        </Featured >
     )
 }
