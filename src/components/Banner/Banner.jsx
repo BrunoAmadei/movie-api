@@ -1,6 +1,6 @@
 import React from 'react'
-import { AiFillStar, AiOutlineInfoCircle } from "react-icons/ai";
-import { Featured, BannerVertical, BannerHorizontal, Title, Info } from './styles'
+import { AiFillStar, AiOutlineInfoCircle, AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
+import { Featured, BannerVertical, BannerHorizontal, Title, Info, Vote, ReleaseDate, Runtime } from './styles'
 import {Link} from 'react-router-dom'
 
 export default ({ item }) => {
@@ -17,13 +17,15 @@ export default ({ item }) => {
                         {item.original_title}
                     </Title>
                     <Info>
-                        <div>
+                        <Vote>
                             <span><AiFillStar /></span> {item.vote_average}
-                        </div>
-                        <div>
-                            {item.release_date}
-                        </div>
-                        <div>{item.runtime} min</div>
+                        </Vote>
+                        <ReleaseDate>
+                            <span><AiFillCalendar/></span> {item.release_date}
+                        </ReleaseDate>
+                        <Runtime>
+                            <span><AiFillClockCircle/></span> {item.runtime} min
+                        </Runtime>
                     </Info>
                     <div>
                         {item.overview}
