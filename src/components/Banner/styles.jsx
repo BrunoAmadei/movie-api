@@ -15,7 +15,7 @@ export const BannerVertical = styled.div`
 export const BannerHorizontal = styled.div`
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #292c37, transparent);
+    background: linear-gradient(to right, #292c37 25%, transparent 65%);
 `
 
 export const Title = styled.div`
@@ -52,4 +52,8 @@ export const Runtime = styled.div`
     }
 `
 export const Description = styled.div`
+    margin-top: 0.6rem;
+    font-size: 1.56rem;
+    color: #fff;
+    max-width: 40%;
 `
