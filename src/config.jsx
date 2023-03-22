@@ -35,7 +35,16 @@ export default {
         if (movieId) {
             info = await fetchApi(`/movie/${movieId}?api_key=${ApiKey}`)
         }
-        
+
         return info
+    },
+
+    getMovieVideos: async (movieId) => {
+        let videos = []
+        if (movieId) {
+            videos = await fetchApi(`/movie/${movieId}/videos?api_key=${ApiKey}`)
+        }
+
+        return videos.results
     }
 }
