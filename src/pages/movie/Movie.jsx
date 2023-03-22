@@ -4,8 +4,6 @@ import config from '../../config'
 
 const Movie = () => {
     const { id } = useParams()
-    console.log(id)
-
     const [trailer, setTrailer] = useState(null)
     useEffect(() => {
         const fetchTrailer = async () => {
@@ -14,7 +12,7 @@ const Movie = () => {
             setTrailer(trailerResult)
         }
         fetchTrailer()
-    }, [])
+    }, [id])
 
     return (
         <div>
