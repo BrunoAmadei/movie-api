@@ -15,6 +15,7 @@ export const Nav = styled.nav`
 `
 
 export const Logo = styled.h1`
+    color: #9f111b;
     font-size: 2rem;
     letter-spacing: 2px;
 `
