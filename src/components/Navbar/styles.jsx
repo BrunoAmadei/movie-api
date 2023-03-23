@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Nav = styled.nav`
     position: fixed;
     z-index: 999;
-    border: 1px solid blue;
     top: 0;
     left: 0;
     right: 0;
@@ -11,16 +10,15 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 `
 
 export const Logo = styled.h1`
-    padding: 1rem;
     font-size: 2rem;
     letter-spacing: 2px;
 `
 
 export const SearchBox = styled.div`
-    padding: 0.8rem 2rem 0.8rem 0;
     max-width: 400px;
     &:hover > input{
        background-color: rgba(41, 44, 55, 0.8);
