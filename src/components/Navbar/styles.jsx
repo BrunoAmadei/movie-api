@@ -33,7 +33,7 @@ export const SearchBox = styled.div`
 `
 
 export const InputSearch = styled.input`
-    padding: 0.6rem;
+    padding: 0.8rem;
     background-color: rgba(0, 0, 0, 0.171);
     border: none;
     outline: none;
@@ -41,12 +41,13 @@ export const InputSearch = styled.input`
     font-size: 1.3rem;
     color: #c1c1c1;
     transition: ease-in 0.3s;
+    text-transform: capitalize;
 `
 
 export const BtnSearch = styled.button`
     color: white;
     float: right;
-    transform: translate(-120%, 5%);
+    transform: translate(-120%, 10%);
     font-size: 1rem;
     width: 40px;
     height: 40px;
