@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import config from '../../config'
 import Movies from '../../components/Movies/Movies'
+import Navbar from '../../components/Navbar/Navbar'
 import Banner from '../../components/Banner/Banner'
 
 const Home = () => {
@@ -25,13 +26,18 @@ const Home = () => {
 
     return (
         <div className='lists'>
+            <Navbar />
+
             {bannerData &&
                 <Banner item={bannerData} />
             }
-            {movieList.map((item, key) => (
-                <Movies key={key} title={item.title} items={item.items} />
-            ))
-            }
+
+            <section className='lists'>
+                {movieList.map((item, key) => (
+                    <Movies key={key} title={item.title} items={item.items} />
+                ))
+                }
+            </section>
         </div >
     )
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Featured = styled.section`
-    height: 92vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
 `
@@ -20,6 +20,8 @@ export const BannerHorizontal = styled.div`
     flex-direction: column;
     justify-content: center;
     padding-left: 30px;
+    padding-bottom: 50px;
+    padding-top: 70px;
 `
 
 export const Title = styled.div`

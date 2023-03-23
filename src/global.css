@@ -14,3 +14,7 @@ a {
   text-decoration: none;
   transition: all 0.3s;
 }
+
+.lists{
+  margin-top: -50px;
+}
