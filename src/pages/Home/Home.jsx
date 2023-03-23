@@ -7,6 +7,7 @@ import Banner from '../../components/Banner/Banner'
 const Home = () => {
     const [movieList, setMovieList] = useState([])
     const [bannerData, setBannerData] = useState(null)
+    const [bgHeader, setBgHeader] = useState(false)
 
     useEffect(() => {
         const loadAll = async () => {
@@ -24,9 +25,13 @@ const Home = () => {
         loadAll()
     }, [])
 
+    useEffect(()=>{},[
+        
+    ])
+
     return (
         <div className='lists'>
-            <Navbar />
+            <Navbar bgHeader={bgHeader} />
 
             {bannerData &&
                 <Banner item={bannerData} />
