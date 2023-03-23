@@ -25,9 +25,21 @@ const Home = () => {
         loadAll()
     }, [])
 
-    useEffect(()=>{},[
-        
-    ])
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+ 
+    const handleScroll = () => {
+        const scrollPosition = window.pageYOffset;
+        if (scrollPosition > 100) {
+            setBgHeader(true);
+        } else {
+            setBgHeader(false);
+        }
+    };
+
+
 
     return (
         <div className='lists'>
