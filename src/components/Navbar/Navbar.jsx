@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom'
-import { Logo, Nav } from './styles';
+import { BtnSearch, InputSearch, Logo, Nav, SearchBox } from './styles';
+import { BsSearch } from "react-icons/bs";
 
 function Navbar() {
     return (
         <Nav>
             <Logo>Get Movies</Logo>
 
-            <div>
-                <input type="text"/>
-                <button type='submit'>search</button>
-            </div>
+            <SearchBox>
+                <InputSearch type="text" placeholder='search' />
+                <BtnSearch type='submit'><BsSearch /></BtnSearch>
+            </SearchBox>
         </Nav>
     )
 }
