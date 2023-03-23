@@ -22,12 +22,13 @@ export const Logo = styled.h1`
 export const SearchBox = styled.div`
     padding: 0.8rem 2rem 0.8rem 0;
     max-width: 400px;
-    border: 1px solid purple ;
     &:hover > input{
        background-color: rgba(41, 44, 55, 0.8);
     }
     &:hover > button{
         color: #b11623;
+        cursor: pointer;
+        background-color: rgba(41, 44, 55, 0.9);
     }
 `
 
@@ -43,7 +44,19 @@ export const InputSearch = styled.input`
 `
 
 export const BtnSearch = styled.button`
-    font-size: 1.3rem;
-    padding: 0.4rem;
+    color: white;
+    float: right;
+    transform: translate(-120%, 5%);
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.171);
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
     transition: ease-in 0.3s;
 `
+
+
