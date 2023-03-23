@@ -11,7 +11,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    transition: all ease 0.5s;
+    transition: all ease 0.4s;
 `
 
 export const Logo = styled.h1`

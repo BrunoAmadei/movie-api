@@ -3,6 +3,7 @@ import config from '../../config'
 import Movies from '../../components/Movies/Movies'
 import Navbar from '../../components/Navbar/Navbar'
 import Banner from '../../components/Banner/Banner'
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
     const [movieList, setMovieList] = useState([])
@@ -29,7 +30,7 @@ const Home = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
- 
+
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         if (scrollPosition > 100) {
@@ -42,7 +43,7 @@ const Home = () => {
 
 
     return (
-        <div className='lists'>
+        <div>
             <Navbar bgHeader={bgHeader} />
 
             {bannerData &&
@@ -55,6 +56,8 @@ const Home = () => {
                 ))
                 }
             </section>
+
+            <Footer />
         </div >
     )
 }

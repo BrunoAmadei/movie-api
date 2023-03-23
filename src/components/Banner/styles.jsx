@@ -21,7 +21,7 @@ export const BannerHorizontal = styled.div`
     justify-content: center;
     padding-left: 30px;
     padding-bottom: 50px;
-    padding-top: 70px;
+    padding-top: 60px;
 `
 
 export const Title = styled.div`
