@@ -11,6 +11,7 @@ export const Footer = styled.footer`
     p{
         font-size: 1rem;
         margin: 12px 0;
+        font-style: italic;
     }
     a{
         text-decoration: underline;
