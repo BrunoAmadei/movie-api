@@ -46,20 +46,19 @@ const Home = () => {
     return (
         <div>
             <Navbar bgHeader={bgHeader} />
-
             {bannerData &&
                 <Banner item={bannerData} />
             }
-
             <section className='lists'>
                 {movieList.map((item, key) => (
                     <Movies key={key} title={item.title} items={item.items} />
                 ))
                 }
             </section>
-
+            {movieList.length <= 0 &&
+                <Loading />
+            }
             <Footer />
-            <Loading />
         </div >
     )
 }
