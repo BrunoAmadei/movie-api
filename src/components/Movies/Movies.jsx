@@ -4,7 +4,7 @@ import { MovieRow, Cards, Card, Item, BackArrow, ForwardArrow } from "./styles";
 import { IoCaretBackCircle, IoCaretForwardCircle } from "react-icons/io5";
 
 export default ({ title, items }) => {
-    const [scrollX, setScrollX] = useState(-400)
+    const [scrollX, setScrollX] = useState(0)
 
     const handleBackClick = () => {
         let x = scrollX + Math.round(window.innerWidth / 2)
@@ -15,7 +15,12 @@ export default ({ title, items }) => {
     }
 
     const handleForwardClick = () => {
-
+        let x = scrollX - Math.round(window.innerWidth / 2)
+        let cardsW = items.results.length * 230
+        if(window.innerWidth - cardsW > x){
+            x = (window.innerWidth - cardsW) - 60
+        }
+        setScrollX(x)
     }
 
     return (
