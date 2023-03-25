@@ -1,4 +1,4 @@
-import { ApiKey } from "./key"
+const ApiKey = '1ca36e40b3ec689a0a6ecc1584b108e8'
 const ApiUrl = 'https://api.themoviedb.org/3'
 
 //api.themoviedb.org/3/search/movie/
