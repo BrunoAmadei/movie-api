@@ -61,7 +61,7 @@ export const Description = styled.div`
     margin-top: 0.6rem;
     font-size: 1.56rem;
     color: #fff;
-    max-width: 40%;
+    max-width: 45%;
 `
 
 export const BtnArea = styled.div`

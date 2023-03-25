@@ -29,12 +29,12 @@ export default ({ item }) => {
                         </Runtime>
                     </Info>
                     <Description>
-                        {item.overview}
+                        <p>{item.overview.split(" ").slice(0, 30).join(" ")}...</p>
                     </Description>
                     <BtnArea>
                         <a href={`/Movie/${item.id}`}>
                             <button>
-                               <span><BsInfoCircle /></span> Info
+                                <span><BsInfoCircle /></span> Info
                             </button>
                         </a>
                     </BtnArea>
