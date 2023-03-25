@@ -33,12 +33,12 @@ export const Item = styled.div`
     }
 `
 export const BackArrow = styled.div`
-    margin-top: 1.4rem;
+    margin-top: 1rem;
     position: absolute;
-    left: 1.5%;
+    left: 1.3%;
     font-size: 50px;
     width: 70px;
-    height: 300px;
+    height: 315px;
     z-index: 99;
     display: flex;
     align-items: center;
@@ -46,15 +46,16 @@ export const BackArrow = styled.div`
     background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     opacity: 0;
+    border-radius: 1rem 0 0 1rem;
     transition: all ease-in 0.3s;
 `
 export const ForwardArrow = styled.div`
-    margin-top: 1.4rem;
+    margin-top: 1rem;
     position: absolute;
     right: 0;
     font-size: 50px;
-    width: 50px;
-    height: 300px;
+    width: 70px;
+    height: 315px;
     z-index: 99;
     display: flex;
     align-items: center;
@@ -62,5 +63,6 @@ export const ForwardArrow = styled.div`
     background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     opacity: 0;
-    transition: all ease-in 0.3s;
+    border-radius: 0 1rem 1rem 0;
+    transition: all 0.5s;
 `
