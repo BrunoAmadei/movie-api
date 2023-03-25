@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const MovieRow = styled.div`
     margin: 0 0 1.135rem 1.8rem;
+    &:hover > div{
+        opacity: 1;
+        color: #9f111b;
+    }
 `
 
 export const Cards = styled.div`
@@ -19,7 +23,7 @@ export const Item = styled.div`
     img{
         width: 100%;
         border-radius: 1rem;
-        border: 3px solid #9f111b;
+        /* border: 3px solid #9f111b; */
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transform: scale(0.9);
         transition: all ease-in 0.3s;
@@ -27,4 +31,36 @@ export const Item = styled.div`
         transform: scale(1);
         cursor: pointer;
     }
+`
+export const BackArrow = styled.div`
+    margin-top: 1.4rem;
+    position: absolute;
+    left: 1.5%;
+    font-size: 50px;
+    width: 70px;
+    height: 300px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease-in 0.3s;
+`
+export const ForwardArrow = styled.div`
+    margin-top: 1.4rem;
+    position: absolute;
+    right: 0;
+    font-size: 50px;
+    width: 50px;
+    height: 300px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease-in 0.3s;
 `
