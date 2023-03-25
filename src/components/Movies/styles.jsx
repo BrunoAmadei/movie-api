@@ -14,7 +14,7 @@ export const Cards = styled.div`
 `
 
 export const Card = styled.div`
-    width: 9999999px;
+    transition: all ease .5s;
 `
 
 export const Item = styled.div`
