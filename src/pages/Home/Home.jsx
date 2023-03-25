@@ -4,6 +4,7 @@ import Movies from '../../components/Movies/Movies'
 import Navbar from '../../components/Navbar/Navbar'
 import Banner from '../../components/Banner/Banner'
 import Footer from '../../components/Footer/Footer'
+import Loading from '../../components/Loading/Loading'
 
 const Home = () => {
     const [movieList, setMovieList] = useState([])
@@ -58,6 +59,7 @@ const Home = () => {
             </section>
 
             <Footer />
+            <Loading />
         </div >
     )
 }
