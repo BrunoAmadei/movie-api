@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     overflow-x: hidden;
-    border: 1px solid blue;
     padding: 1.5rem;
     text-transform: capitalize;
     h2{
@@ -15,15 +14,16 @@ export const Container = styled.div`
 export const MovieList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 25px;
 `
 
 export const Movie = styled.div`
-    width: 230px;
+    width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     img{
         width: 100%;
         border-radius: 1rem;

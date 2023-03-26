@@ -15,6 +15,6 @@ a {
   transition: all 0.3s;
 }
 
-.navbar{
-  border: 1px solid green;
+.lists{
+  margin-top: -70px;
 }
