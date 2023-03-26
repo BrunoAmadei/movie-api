@@ -16,7 +16,9 @@ function Navbar({ bgHeader }) {
 
     return (
         <Nav style={{ backgroundColor: bgHeader ? '#1b1d24' : 'transparent' }}>
-            <Logo>Get Movies</Logo>
+            <Link to={'/'}>
+                <Logo>Get Movies</Logo>
+            </Link>
 
             <SearchBox>
                 <form onSubmit={handleSubmit}>
