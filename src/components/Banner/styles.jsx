@@ -25,7 +25,7 @@ export const BannerHorizontal = styled.div`
 `
 
 export const Title = styled.div`
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #b11623;
     
