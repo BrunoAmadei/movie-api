@@ -6,11 +6,11 @@ export const Footer = styled.footer`
     color: #b3b3b3;
     h2{
         font-weight: light;
-
+        font-size: 1.25rem;
     }
     p{
-        font-size: 1rem;
-        margin: 12px 0;
+        font-size: 0.9rem;
+        margin: 12px;
         font-style: italic;
     }
     a{
