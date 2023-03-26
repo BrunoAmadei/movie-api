@@ -59,7 +59,7 @@ export const Runtime = styled.div`
 `
 export const Description = styled.div`
     margin-top: 0.6rem;
-    font-size: 1.56rem;
+    font-size: 1.5rem;
     color: #fff;
     max-width: 45%;
 `
