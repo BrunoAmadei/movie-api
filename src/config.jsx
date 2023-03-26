@@ -46,5 +46,9 @@ export default {
         }
 
         return videos.results
+    },
+    getSearchMovies: async (query) => {
+        const response = await fetchApi(`/search/movie?api_key=${ApiKey}&query=${query}`)
+        return response.results
     }
 }

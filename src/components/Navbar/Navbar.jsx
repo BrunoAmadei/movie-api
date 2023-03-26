@@ -7,9 +7,11 @@ function Navbar({ bgHeader }) {
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(search)
+        if (!search) return
+        navigate(`/search?q=${search}`)
+        setSearch("")
     }
 
     return (
@@ -17,7 +19,7 @@ function Navbar({ bgHeader }) {
             <Logo>Get Movies</Logo>
 
             <SearchBox>
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <InputSearch
                         type="text" placeholder='search'
                         onChange={(e) => setSearch(e.target.value)}
