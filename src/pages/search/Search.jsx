@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import config from '../../config';
+import Footer from '../../components/Footer/Footer'
+import { Container } from './styles';
+
 
 function Search() {
   const [movies, setMovies] = useState([]);
@@ -11,16 +14,32 @@ function Search() {
     const fetchMovies = async () => {
       const results = await config.getSearchMovies(query);
       setMovies(results);
-      console.log(results)
     };
     fetchMovies();
   }, [query]);
 
   return (
-    <div>
-        <h2>Results for: <span>{query}</span></h2>
-        
-    </div>
+    <Container>
+      <h2>Results for: <span>{query}</span></h2>
+      {movies.map(movie => {
+        if (movie.poster_path) {
+          return (
+            <ul key={movie.id}>
+              <li>
+                <Link to={`/Movie/${movie.id}`}>
+                  <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
+                  {movie.title}
+                </Link>
+              </li>
+            </ul>
+          )
+        }else{
+          return null
+        }
+      })}
+
+      <Footer/>
+    </Container >
   );
 }
 
