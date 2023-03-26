@@ -22,10 +22,10 @@ export const Logo = styled.h1`
 
 export const SearchBox = styled.div`
     max-width: 400px;
-    &:hover > input{
+    &:hover > form > input{
        background-color: rgba(41, 44, 55, 0.8);
     }
-    &:hover > button{
+    &:hover > form > button{
         color: #b11623;
         cursor: pointer;
         background-color: rgba(41, 44, 55, 0.9);
