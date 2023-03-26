@@ -31,7 +31,7 @@ export const Title = styled.div`
 `
 
 export const Info = styled.div`
-    font-size: 1.35rem;
+    font-size: 1rem;
     margin-top: 0.6rem;
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@ export const ReleaseDate = styled.div`
 export const Runtime = styled.div`
     span{
         color: #9f111b;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `
 export const Description = styled.div`
@@ -93,5 +93,5 @@ export const BtnArea = styled.div`
 
 export const Genres = styled.div`
     margin-top: 0.7rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 `
