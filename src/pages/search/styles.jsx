@@ -8,17 +8,21 @@ export const Container = styled.div`
         margin-top: 5rem;
         font-size: 1rem;
         font-style: italic;
+        @media screen and (max-width: 760px) {
+            padding-top: 50px;
+        }   
     }
 `
 
 export const MovieList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 25px;
 `
 
 export const Movie = styled.div`
-    width: 220px;
+    width: 100%; 
+    max-width: 220px;  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,5 +39,12 @@ export const Movie = styled.div`
     img:hover{
         transform: scale(1);
         cursor: pointer;
+    }
+
+    /* media query para telas menores */
+    @media screen and (max-width: 760px) {
+        max-width: 180px;
+        border: 1px solid black;
+        margin: 12px auto;
     }
 `
