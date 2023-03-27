@@ -9,7 +9,6 @@ export default ({ item }) => {
     for (let g in item.genres) {
         genres.push(item.genres[g].name)
     }
-    console.log(item)
     return (
         <Featured style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})` }}>
             <BannerVertical>

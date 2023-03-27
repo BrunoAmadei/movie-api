@@ -12,6 +12,11 @@ export const Nav = styled.nav`
     align-items: center;
     padding: 0 2rem;
     transition: all ease 0.4s;
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
 `
 
 export const Logo = styled.h1`
@@ -22,8 +27,9 @@ export const Logo = styled.h1`
 
 export const SearchBox = styled.div`
     max-width: 400px;
+    position: relative;
     &:hover > form > input{
-       background-color: rgba(41, 44, 55, 0.8);
+        background-color: rgba(41, 44, 55, 0.8);
     }
     &:hover > form > button{
         color: #b11623;
@@ -42,12 +48,14 @@ export const InputSearch = styled.input`
     color: #c1c1c1;
     transition: ease-in 0.3s;
     text-transform: capitalize;
+    width: 100%;
+    @media (max-width: 760px) {
+       margin-top: 15px;
+    }
 `
 
 export const BtnSearch = styled.button`
     color: white;
-    float: right;
-    transform: translate(-120%, 10%);
     font-size: 1rem;
     width: 40px;
     height: 40px;
@@ -58,6 +66,12 @@ export const BtnSearch = styled.button`
     justify-content: center;
     align-items: center;
     transition: ease-in 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-25%, 10%);
+    @media (max-width: 760px) {
+        transform: translate(-40%, 50%);
+    }
 `
-
 

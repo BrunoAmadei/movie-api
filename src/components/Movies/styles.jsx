@@ -23,7 +23,6 @@ export const Item = styled.div`
     img{
         width: 100%;
         border-radius: 1rem;
-        /* border: 3px solid #9f111b; */
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transform: scale(0.9);
         transition: all ease-in 0.3s;
@@ -48,6 +47,9 @@ export const BackArrow = styled.div`
     opacity: 0;
     border-radius: 1rem 0 0 1rem;
     transition: all ease-in 0.3s;
+    @media(max-width: 760px){
+        opacity: 1;
+    }
 `
 export const ForwardArrow = styled.div`
     margin-top: 1rem;
@@ -65,4 +67,7 @@ export const ForwardArrow = styled.div`
     opacity: 0;
     border-radius: 0 1rem 1rem 0;
     transition: all 0.5s;
+    @media(max-width: 760px){
+        opacity: 1;
+    }
 `

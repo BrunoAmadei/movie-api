@@ -22,12 +22,19 @@ export const BannerHorizontal = styled.div`
     padding-left: 30px;
     padding-bottom: 50px;
     padding-top: 60px;
+    @media screen and (max-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 `
 
 export const Title = styled.div`
     font-size: 2.15rem;
     font-weight: bold;
     color: #b11623;
+    @media screen and (max-width: 768px) {
+        font-size: 1.8rem;
+    }
 `
 
 export const Info = styled.div`
@@ -36,6 +43,10 @@ export const Info = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+    @media screen and (max-width: 768px) {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
 `
 
 export const Vote = styled.div`
@@ -61,6 +72,10 @@ export const Description = styled.div`
     font-size: 1.25rem;
     color: #fff;
     max-width: 45%;
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        max-width: 100%;
+    }
 `
 
 export const BtnArea = styled.div`
@@ -89,9 +104,15 @@ export const BtnArea = styled.div`
         color: #9f111b;
         opacity: 0.7;
     }
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
 `
 
 export const Genres = styled.div`
     margin-top: 0.7rem;
     font-size: 1rem;
+    @media screen and (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 `
