@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
 import config from '../../config'
+import { Container, DetailsArea } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -13,7 +14,7 @@ const Movie = () => {
             const details = await config.getMovieInfo(id)
             console.log(details)
             setMovieDetails(details)
-        
+
             const genres = details.genres.map(genre => genre.name)
             setGenres(genres)
         }
@@ -37,18 +38,20 @@ const Movie = () => {
     }
 
     return (
-        <div>
-            <h1>{movieDetails.title}</h1>
+        <Container background={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}>
             <div>
-                <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
-                <div>
-                    <p>{movieDetails.vote_average}</p>
-                    <p>{movieDetails.runtime}</p>
-                    <p>{movieDetails.vote_average}</p>
-                    <p><strong>Genres:</strong> {genres.join(', ')}</p>
-                </div>
+                <h1>{movieDetails.title}</h1>
+                <DetailsArea>
+                    <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
+                    <div>
+                        <p>{movieDetails.vote_average}</p>
+                        <p>{movieDetails.runtime}</p>
+                        <p>{movieDetails.vote_average}</p>
+                        <p><strong>Genres:</strong> {genres.join(', ')}</p>
+                    </div>
+                </DetailsArea>
             </div>
-        </div>
+        </Container>
     )
 }
 
