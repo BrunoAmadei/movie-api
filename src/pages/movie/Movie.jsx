@@ -44,11 +44,13 @@ const Movie = () => {
                 <DetailsArea>
                     <InfoBox>
                         <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
-                       <Info>
-                           <p>{movieDetails.vote_average}</p>
-                           <p>{movieDetails.runtime} min</p>
-                        </Info> 
-                            <p><strong>Genres:</strong> {genres.join(', ')}</p>
+                        <Info>
+                            <p>{movieDetails.vote_average.toFixed(2)}</p>
+                            <p>{movieDetails.runtime} min</p>
+                        </Info>
+                        <p>
+                            <strong>Genres:</strong> {genres.join(', ')}
+                        </p>
                     </InfoBox>
 
                     <Description>
