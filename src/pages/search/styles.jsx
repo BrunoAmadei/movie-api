@@ -43,8 +43,7 @@ export const Movie = styled.div`
 
     /* media query para telas menores */
     @media screen and (max-width: 760px) {
-        max-width: 180px;
-        border: 1px solid black;
+        max-width: 300px;
         margin: 12px auto;
     }
 `
