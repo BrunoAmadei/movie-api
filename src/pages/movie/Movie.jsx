@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
 import config from '../../config'
-import { Container, DetailsArea } from './styles'
+import { Container, Description, InfoBox, Info, DetailsArea } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -42,13 +42,18 @@ const Movie = () => {
             <div>
                 <h1>{movieDetails.title}</h1>
                 <DetailsArea>
-                    <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
-                    <div>
-                        <p>{movieDetails.vote_average}</p>
-                        <p>{movieDetails.runtime}</p>
-                        <p>{movieDetails.vote_average}</p>
-                        <p><strong>Genres:</strong> {genres.join(', ')}</p>
-                    </div>
+                    <InfoBox>
+                        <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
+                       <Info>
+                           <p>{movieDetails.vote_average}</p>
+                           <p>{movieDetails.runtime} min</p>
+                        </Info> 
+                            <p><strong>Genres:</strong> {genres.join(', ')}</p>
+                    </InfoBox>
+
+                    <Description>
+                        {movieDetails.overview}
+                    </Description>
                 </DetailsArea>
             </div>
         </Container>

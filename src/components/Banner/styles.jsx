@@ -69,9 +69,9 @@ export const Runtime = styled.div`
 `
 export const Description = styled.div`
     margin-top: 0.6rem;
-    font-size: 1.25rem;
+   font-size: 1.25rem;
     color: #fff;
-    max-width: 45%;
+    max-width: 4 5%;
     @media screen and (max-width: 768px) {
         font-size: 1rem;
         max-width: 100%;
