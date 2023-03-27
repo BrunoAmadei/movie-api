@@ -1,22 +1,53 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Loading from '../../components/Loading/Loading'
 import config from '../../config'
 
 const Movie = () => {
     const { id } = useParams()
     const [trailer, setTrailer] = useState(null)
+    const [movieDetails, setMovieDetails] = useState(null)
+
+    useEffect(() => {
+        const fetchMovieDetails = async () => {
+            const details = await config.getMovieInfo(id)
+            console.log(details)
+            setMovieDetails(details)
+        
+            const genres = details.genres.map(genre => genre.name)
+            setGenres(genres)
+        }
+        fetchMovieDetails()
+    }, [id])
+
+    const [genres, setGenres] = useState([])
+
     useEffect(() => {
         const fetchTrailer = async () => {
             const trailerResult = await config.getMovieVideos(id)
-            console.log(trailerResult)
             setTrailer(trailerResult)
         }
         fetchTrailer()
     }, [id])
 
+    if (!movieDetails || !trailer) {
+        return (
+            <Loading />
+        )
+    }
+
     return (
         <div>
-            <h1>Página de detalhes de filmes</h1>
+            <h1>{movieDetails.title}</h1>
+            <div>
+                <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
+                <div>
+                    <p>{movieDetails.vote_average}</p>
+                    <p>{movieDetails.runtime}</p>
+                    <p>{movieDetails.vote_average}</p>
+                    <p><strong>Genres:</strong> {genres.join(', ')}</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -3,7 +3,6 @@ import { AiFillStar, AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { Featured, BannerVertical, BannerHorizontal, Title, Info, Vote, ReleaseDate, Runtime, Description, BtnArea, Genres } from './styles'
 
-
 export default ({ item }) => {
     let genres = []
     for (let g in item.genres) {
