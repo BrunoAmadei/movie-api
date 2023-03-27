@@ -15,6 +15,25 @@ a {
   transition: all 0.3s;
 }
 
-.lists{
+/* Estilos da scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1d24;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9f111b;
+  border-radius: 10px;
+  border: 2px solid #1b1d24;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d31e2e;
+}
+
+.lists {
   margin-top: -70px;
 }
