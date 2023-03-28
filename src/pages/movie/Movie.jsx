@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
 import config from '../../config'
-import { Container, Description, InfoBox, Info, DetailsArea } from './styles'
+import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -12,7 +12,6 @@ const Movie = () => {
     useEffect(() => {
         const fetchMovieDetails = async () => {
             const details = await config.getMovieInfo(id)
-            console.log(details)
             setMovieDetails(details)
 
             const genres = details.genres.map(genre => genre.name)
@@ -23,13 +22,25 @@ const Movie = () => {
 
     const [genres, setGenres] = useState([])
 
+    // Trailers
     useEffect(() => {
         const fetchTrailer = async () => {
             const trailerResult = await config.getMovieVideos(id)
-            setTrailer(trailerResult)
+            const officialTrailer = trailerResult.find(trailer => trailer.type === 'Trailer' && trailer.site === 'YouTube')
+            console.log(officialTrailer)
+            if (officialTrailer) {
+                setTrailer(officialTrailer.key)
+            }
         }
         fetchTrailer()
     }, [id])
+
+
+
+    const onTrailerError = (e) => {
+        console.log('Erro ao carregar trailer:', e)
+        setTrailer(null)
+    }
 
     if (!movieDetails || !trailer) {
         return (
@@ -53,9 +64,23 @@ const Movie = () => {
                         </p>
                     </InfoBox>
 
-                    <Description>
-                        {movieDetails.overview}
-                    </Description>
+
+                    <DescriptionContainer> 
+                        <VideoContainer>
+                            <h2>Trailer</h2>
+                            <iframe
+                                title='Trailer'
+                                width={560}
+                                height={315}
+                                src={`https://www.youtube.com/embed/${trailer}`}
+                                allowFullScreen
+                            ></iframe>
+                        </VideoContainer>
+                        <Description>
+                            {movieDetails.overview}
+                        </Description>
+                    </DescriptionContainer>
+
                 </DetailsArea>
             </div>
         </Container>
