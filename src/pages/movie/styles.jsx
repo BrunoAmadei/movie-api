@@ -48,10 +48,10 @@ export const DetailsArea = styled.div`
 export const InfoBox = styled.div`
     padding: 0.5rem;
     img {
-    width: 300px;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
+        width: 300px;
+        border-radius: 1rem;   
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 `
 
 export const Info = styled.div`
@@ -74,7 +74,7 @@ export const VideoContainer = styled.div`
 
 export const Video = styled.iframe`
     align-items: center;
-    border: 1px solid #b11623;
+    border: 1px solid #9f111b; 
     border-radius: 5px;
 `
 
