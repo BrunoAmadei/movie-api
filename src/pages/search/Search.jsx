@@ -7,8 +7,7 @@ import { Container, MovieList, Movie } from './styles';
 
 function Search() {
   const [movies, setMovies] = useState([]);
-  const [bgHeader, setBgHeader] = useState(false)
-
+  
   const location = useLocation();
   const query = new URLSearchParams(location.search).get('q');
 
@@ -20,22 +19,9 @@ function Search() {
     fetchMovies();
   }, [query]);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    const scrollPosition = window.pageYOffset;
-    if (scrollPosition > 50) {
-      setBgHeader(true);
-    } else {
-      setBgHeader(false);
-    }
-  };
   return (
     <Container>
-      <Navbar  bgHeader={bgHeader}/>
+      <Navbar />
       <h2>Results for: <span>{query}</span></h2>
       <MovieList>
         {movies.map(movie => {
