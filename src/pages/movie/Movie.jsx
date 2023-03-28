@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
+import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import config from '../../config'
 import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video } from './styles'
@@ -82,6 +83,7 @@ const Movie = () => {
                     </DescriptionContainer>
 
                 </DetailsArea>
+                <Footer/>
             </div>
         </Container>
     )
