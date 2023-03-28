@@ -81,11 +81,18 @@ export const Info = styled.div`
     display: flex;
     font-size: 1rem;
     gap: 1rem;
-
+    span{
+      color: #b11623;
+    }
     @media screen and (max-width: 760px) {
       gap: 0.8rem;
     }
 `
+export const Genre = styled.p`
+  margin-top: 12px;
+  font-size: 1rem;
+`
+
 export const DescriptionContainer = styled.section`
     margin-left: 1rem;
     display: flex;

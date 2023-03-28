@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import config from '../../config'
 import Loading from '../../components/Loading/Loading'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
-import config from '../../config'
-import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video, Title } from './styles'
+import { AiFillStar, AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
+import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video, Title, Genre } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -58,12 +59,19 @@ const Movie = () => {
                     <InfoBox>
                         <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />
                         <Info>
-                            <p>{movieDetails.vote_average.toFixed(2)}</p>
-                            <p>{movieDetails.runtime} min</p>
+                            <p>
+                                <span><AiFillStar /></span> {movieDetails.vote_average.toFixed(2)}
+                            </p>
+                            <p>
+                                <span><AiFillCalendar /></span> {movieDetails.release_date}
+                            </p>
+                            <p>
+                                <span><AiFillClockCircle /></span> {movieDetails.runtime} min
+                            </p>
                         </Info>
-                        <p>
+                        <Genre>
                             <strong>Genres:</strong> {genres.join(', ')}
-                        </p>
+                        </Genre>
                     </InfoBox>
 
                     <DescriptionContainer>
