@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { BtnSearch, InputSearch, Logo, Nav, SearchBox } from './styles';
 import { BsSearch } from "react-icons/bs";
 
-function Navbar({ bgHeader }) {
+function Navbar() {
     const [search, setSearch] = useState("")
+    const [bgHeader, setBgHeader] = useState(false)
     const navigate = useNavigate()
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const handleScroll = () => {
+        const scrollPosition = window.pageYOffset;
+        if (scrollPosition > 100) {
+            setBgHeader(true);
+        } else {
+            setBgHeader(false);
+        }
+    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()

@@ -51,6 +51,7 @@ const Movie = () => {
 
     return (
         <Container background={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}>
+            <Navbar />
             <div>
                 <h1>{movieDetails.title}</h1>
                 <DetailsArea>
@@ -65,7 +66,6 @@ const Movie = () => {
                         </p>
                     </InfoBox>
 
-
                     <DescriptionContainer>
                         <VideoContainer>
                             <Video
@@ -73,7 +73,6 @@ const Movie = () => {
                                 width={560}
                                 height={315}
                                 src={`https://www.youtube.com/embed/${trailer}`}
-                                allowFullScreen
                             ></Video>
                         </VideoContainer>
                         <Description>
@@ -83,7 +82,7 @@ const Movie = () => {
                     </DescriptionContainer>
 
                 </DetailsArea>
-                <Footer/>
+                <Footer />
             </div>
         </Container>
     )

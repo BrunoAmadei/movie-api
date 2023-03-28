@@ -9,7 +9,6 @@ import Loading from '../../components/Loading/Loading'
 const Home = () => {
     const [movieList, setMovieList] = useState([])
     const [bannerData, setBannerData] = useState(null)
-    const [bgHeader, setBgHeader] = useState(false)
 
     useEffect(() => {
         const loadAll = async () => {
@@ -27,23 +26,10 @@ const Home = () => {
         loadAll()
     }, [])
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const handleScroll = () => {
-        const scrollPosition = window.pageYOffset;
-        if (scrollPosition > 100) {
-            setBgHeader(true);
-        } else {
-            setBgHeader(false);
-        }
-    };
 
     return (
         <div>
-            <Navbar bgHeader={bgHeader} />
+            <Navbar />
             {bannerData &&
                 <Banner item={bannerData} />
             }
