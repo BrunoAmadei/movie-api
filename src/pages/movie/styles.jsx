@@ -38,19 +38,40 @@ export const Container = styled.div`
         text-align: center;
         z-index: 1; 
     }
+    
+    @media screen and (max-width: 760px) {
+      & > div {
+        padding: 2rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
 `;
 
 export const DetailsArea = styled.div`
     display: flex;
     align-items: center;
     margin: 0 2rem ;
+    
+    @media screen and (max-width: 760px) {
+      flex-direction: column;
+      margin: 1rem 0;
+    }
 `
 export const InfoBox = styled.div`
-    padding: 0.5rem;
+    padding: 0.5rem;  
     img {
         width: 300px;
         border-radius: 1rem;   
-        box-shadow: rgba(0, 0, 0, 0.74) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.815) 0px 5px 15px;
+    }
+    
+    @media screen and (max-width: 760px) {
+      img {
+        width: 100%;
+      }
     }
 `
 
@@ -58,27 +79,44 @@ export const Info = styled.div`
     display: flex;
     font-size: 1rem;
     gap: 1rem;
+    
+    @media screen and (max-width: 760px) {
+      gap: 0.8rem;
+    }
 `
 export const DescriptionContainer = styled.section`
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @media screen and (max-width: 760px) {
+      margin-left: 0;
+      margin-top: 1rem;
+      text-align: center;
+    }
 `;
 
 export const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+    @media screen and (max-width: 760px) {
+        width: 370px;
+        padding: 16px;
+    }
 `;
 
 export const Video = styled.iframe`
     align-items: center;
-    border: 1px solid #9f111b; 
+    border: 1px solid  #9f111b;
     border-radius: 5px;
+    @media screen and (max-width: 760px) {
+        width: 375px;
+    }
 `
-
 export const Description = styled.div`
+    z-index: 1;
     font-size: 1.3rem;   
     padding: 0.5rem;
     color: #fff;
@@ -86,6 +124,8 @@ export const Description = styled.div`
     h2{
         margin: 0.5rem 0;
     }
+    @media screen and (max-width: 760px) {
+        width: 375px;
+        font-size: 16px;
+    }
 `
-
-
