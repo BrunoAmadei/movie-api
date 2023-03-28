@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
+import Navbar from '../../components/Navbar/Navbar'
 import config from '../../config'
-import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer } from './styles'
+import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -65,18 +66,19 @@ const Movie = () => {
                     </InfoBox>
 
 
-                    <DescriptionContainer> 
+                    <DescriptionContainer>
                         <VideoContainer>
-                            <h2>Trailer</h2>
-                            <iframe
+
+                            <Video
                                 title='Trailer'
                                 width={560}
                                 height={315}
                                 src={`https://www.youtube.com/embed/${trailer}`}
                                 allowFullScreen
-                            ></iframe>
+                            ></Video>
                         </VideoContainer>
                         <Description>
+                            <h2>Sinopse</h2>
                             {movieDetails.overview}
                         </Description>
                     </DescriptionContainer>

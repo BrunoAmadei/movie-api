@@ -7,6 +7,7 @@ export const Container = styled.div`
     background-position: center;
     position: relative;
     width: 100%;
+    height: 100%;
     &::before {
         content: "";
         position: absolute;
@@ -32,7 +33,7 @@ export const Container = styled.div`
     h1 {
         font-size: 2rem;
         padding: 10px;
-        color: #9f111b;
+        color: #b11623;
         margin: 0;
         text-align: center;
         z-index: 1; 
@@ -54,7 +55,6 @@ export const Info = styled.div`
     gap: 1rem;
 `
 export const DescriptionContainer = styled.section`
-    border: 1px solid blue;
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
@@ -62,17 +62,23 @@ export const DescriptionContainer = styled.section`
 `;
 
 export const VideoContainer = styled.div`
-    h2{
-        
-        padding: 12px;
-    }
+    
 `;
+
+export const Video = styled.iframe`
+    align-items: center;
+    border: 1px solid #b11623;
+`
 
 export const Description = styled.div`
     font-size: 1.3rem;   
     padding: 0.5rem;
     color: #fff;
     width: 100%;
+    h2{
+        color: #000000;
+        margin: 0.5rem 0;
+    }
 `
 
 
