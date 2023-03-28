@@ -79,7 +79,7 @@ export const Info = styled.div`
     display: flex;
     font-size: 1rem;
     gap: 1rem;
-    
+
     @media screen and (max-width: 760px) {
       gap: 0.8rem;
     }
@@ -117,12 +117,13 @@ export const Video = styled.iframe`
 `
 export const Description = styled.div`
     z-index: 1;
-    font-size: 1.3rem;   
+    font-size: 1.2rem;   
     padding: 0.5rem;
     color: #fff;
     width: 100%;
     h2{
         margin: 0.5rem 0;
+        color:#cccccc;
     }
     @media screen and (max-width: 760px) {
         width: 375px;
