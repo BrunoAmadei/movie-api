@@ -23,7 +23,7 @@ export const Container = styled.div`
     & > div {
         z-index: 1; 
         display: flex;
-        padding: 2rem;
+        padding: 5rem;
         background-color: rgba(0, 0, 0, 0.4); 
         width: 100%;
         height: 100%;
@@ -47,6 +47,11 @@ export const DetailsArea = styled.div`
 `
 export const InfoBox = styled.div`
     padding: 0.5rem;
+    img {
+    width: 300px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 `
 
 export const Info = styled.div`
@@ -62,12 +67,15 @@ export const DescriptionContainer = styled.section`
 `;
 
 export const VideoContainer = styled.div`
-    
+    display: flex;
+    justify-content: center;
+    width: 100%;
 `;
 
 export const Video = styled.iframe`
     align-items: center;
     border: 1px solid #b11623;
+    border-radius: 5px;
 `
 
 export const Description = styled.div`
@@ -76,7 +84,6 @@ export const Description = styled.div`
     color: #fff;
     width: 100%;
     h2{
-        color: #000000;
         margin: 0.5rem 0;
     }
 `

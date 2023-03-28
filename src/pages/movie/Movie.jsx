@@ -28,7 +28,6 @@ const Movie = () => {
         const fetchTrailer = async () => {
             const trailerResult = await config.getMovieVideos(id)
             const officialTrailer = trailerResult.find(trailer => trailer.type === 'Trailer' && trailer.site === 'YouTube')
-            console.log(officialTrailer)
             if (officialTrailer) {
                 setTrailer(officialTrailer.key)
             }
@@ -68,7 +67,6 @@ const Movie = () => {
 
                     <DescriptionContainer>
                         <VideoContainer>
-
                             <Video
                                 title='Trailer'
                                 width={560}
