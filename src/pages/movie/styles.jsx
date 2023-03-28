@@ -28,27 +28,29 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         flex-direction: column;
+        
     }
-
-    h1 {
-        font-size: 2rem;
-        padding: 10px;
-        color: #b11623;
-        margin: 0;
-        text-align: center;
-        z-index: 1; 
-    }
-    
+  
     @media screen and (max-width: 760px) {
       & > div {
         padding: 2rem;
-      }
-      
+      }   
+    }
+`;
+
+export const Title = styled.h1`
+    font-size: 2rem;
+    padding: 10px;
+    color: #b11623;
+    padding-top: 130px;
+    text-align: center;
+    z-index: 1; 
+  @media screen and (max-width: 760px){ 
       h1 {
         font-size: 1.5rem;
       }
     }
-`;
+`
 
 export const DetailsArea = styled.div`
     display: flex;

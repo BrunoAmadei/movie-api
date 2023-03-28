@@ -4,7 +4,7 @@ import Loading from '../../components/Loading/Loading'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import config from '../../config'
-import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video } from './styles'
+import { Container, Description, InfoBox, Info, DetailsArea, DescriptionContainer, VideoContainer, Video, Title } from './styles'
 
 const Movie = () => {
     const { id } = useParams()
@@ -53,7 +53,7 @@ const Movie = () => {
         <Container background={`https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`}>
             <Navbar />
             <div>
-                <h1>{movieDetails.title}</h1>
+                <Title>{movieDetails.title}</Title>
                 <DetailsArea>
                     <InfoBox>
                         <img src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`} />

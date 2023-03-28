@@ -14,7 +14,7 @@ export const Nav = styled.nav`
     transition: all ease 0.4s;
     @media screen and (max-width: 760px) {
         flex-direction: column;
-        height: auto;
+        height: 140px;
         padding: 1rem;
     }
 `

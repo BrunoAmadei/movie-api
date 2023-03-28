@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Footer = styled.footer`
-    margin: 70px 0;
+    margin-top: 70px;
+
     text-align: center;
     color: #b3b3b3;
     h2{
