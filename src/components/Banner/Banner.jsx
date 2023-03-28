@@ -17,7 +17,7 @@ export default ({ item }) => {
                     </Title>
                     <Info>
                         <Vote>
-                            <span><AiFillStar /></span> {item.vote_average}
+                            <span><AiFillStar /></span> {item.vote_average.toFixed(2)}
                         </Vote>
                         <ReleaseDate>
                             <span><AiFillCalendar /></span> {item.release_date}
