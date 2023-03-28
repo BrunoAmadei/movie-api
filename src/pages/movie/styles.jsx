@@ -28,6 +28,10 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         flex-direction: column;
+            
+        @media (max-width: 768px) {
+         padding: 2rem;
+        }   
     }
 
     h1 {
@@ -38,12 +42,20 @@ export const Container = styled.div`
         text-align: center;
         z-index: 1; 
     }
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
 `;
 
 export const DetailsArea = styled.div`
     display: flex;
     align-items: center;
     margin: 0 2rem ;
+    @media (max-width: 768px) {
+      flex-direction: column;
+        align-items: center;
+       margin: 0;
+  }
 `
 export const InfoBox = styled.div`
     padding: 0.5rem;
@@ -52,6 +64,9 @@ export const InfoBox = styled.div`
         border-radius: 1rem;   
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
+    @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const Info = styled.div`
@@ -64,6 +79,9 @@ export const DescriptionContainer = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 768px) {
+    margin: 2rem 0;
+  }
 `;
 
 export const VideoContainer = styled.div`
