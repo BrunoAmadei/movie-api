@@ -6,7 +6,8 @@
  #### App Link: [Click here](https://getmovie-ftmb.vercel.app/)
 ---
 #### Home Page
-![GetMovies](https://user-images.githubusercontent.com/110541376/228840809-c259ea1c-b713-4837-90d4-17a19ef7c3ea.png)
+![GetMovies](https://user-images.githubusercontent.com/110541376/228845602-3a38b691-8d4d-46e7-9879-e1c0b2e0b8b8.png)
+
 
 #### Movie Page
 ![movie_page](https://user-images.githubusercontent.com/110541376/228842192-9217e1cc-14b7-4059-bc42-069650c3c723.png)
