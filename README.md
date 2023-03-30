@@ -2,21 +2,25 @@
   This is my first project using ReactJs; In this project, I'm using The Movie Data Base API.
   The design was inspired by Netflix, clicking on the movies you'll be able to read the synopsis, see the duration of the movie, release date, and vote average;
   You can also search for a movie and watch the trailer. I tried to keep the project more organized by separating directories and files, I also used some libraries for     the first time like Styled-components and React-Icons.  
-
-
-![pokedex](https://user-images.githubusercontent.com/110541376/211201817-5efd339f-b54c-41de-ac02-aad0323bd7a5.png)
+  
+ #### App Link: [Click here](https://getmovie-ftmb.vercel.app/)
 ---
+#### Home Page
+![GetMovies](https://user-images.githubusercontent.com/110541376/228840809-c259ea1c-b713-4837-90d4-17a19ef7c3ea.png)
 
+#### Movie Page
+![movie_page](https://user-images.githubusercontent.com/110541376/228842192-9217e1cc-14b7-4059-bc42-069650c3c723.png)
 
+#### Search Page
+![search_page](https://user-images.githubusercontent.com/110541376/228843025-d295a55e-49d5-4b54-a825-cbfec337b4eb.png)
 
+---
 ## 🛠️Built with:
 * _ReactJs_
 * _React-router_
 * _Styled-Components_
 * _React-icons_
 * _React-icons_
-
-
 
 #### API link:
 * [TMDB](https://www.themoviedb.org/)
