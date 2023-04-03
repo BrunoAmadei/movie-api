@@ -11,7 +11,7 @@ export default () => {
                 <a href="https://www.themoviedb.org/" target={"_blank"}> Themoviedb.org </a>
             </p>
             <span>
-                <a href="https://github.com/BrunoAmadei" target={"_blank"}>
+                <a href="https://github.com/BrunoAmadei/movie-api" target={"_blank"}>
                     <BsGithub />
                 </a>
             </span>
